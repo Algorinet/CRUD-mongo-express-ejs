@@ -25,13 +25,69 @@
 			"response": []
 		},
 		{
-			"name": "user",
+			"name": "users/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/60b27a507e71d8866cb1dd18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"60b27a507e71d8866cb1dd18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "raw",
-					"raw": "    {\r\n    \"Nombre\":\"AdD\",\r\n    \"Apellidos\":\"Galileo\",\r\n    \"Edad\": 555,\r\n    \"Dni\":\"53243423C\",\r\n    \"Cumpleanos\": \"2002-13-05\",\r\n    \"ColorFav\":\"Azu3l\",\r\n    \"Sexo\":\"Hombre\"\r\n    }",
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Nombre",
+							"value": "Lola",
+							"type": "text"
+						},
+						{
+							"key": "Apellidos",
+							"value": "Aparicio",
+							"type": "text"
+						},
+						{
+							"key": "Edad",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "Dni",
+							"value": "12347788B",
+							"type": "text"
+						},
+						{
+							"key": "Cumpleanos",
+							"value": "1968-11-02",
+							"type": "text"
+						},
+						{
+							"key": "ColorFav",
+							"value": "Rosa",
+							"type": "text"
+						},
+						{
+							"key": "Sexo",
+							"value": "Mujer",
+							"type": "text"
+						}
+					],
 					"options": {
 						"raw": {
 							"language": "json"
@@ -39,63 +95,70 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/user",
+					"raw": "http://localhost:3000/users",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"user"
+						"users"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "user/id",
+			"name": "users/id",
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"body": {
-					"mode": "raw",
-					"raw": "    {\r\n        \"Nombre\": \"Francisco\"\r\n    }",
-					"options": {
-						"raw": {
-							"language": "json"
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Nombre",
+							"value": "Jose",
+							"type": "text"
 						}
-					}
+					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/user/60b19c02a42aa791f8fd4311",
+					"raw": "http://localhost:3000/users/60b19cfc3d47ba9298cae083",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"user",
-						"60b19c02a42aa791f8fd4311"
+						"users",
+						"60b19cfc3d47ba9298cae083"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "user/id",
+			"name": "users/id",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/user/60b19c1f3d6b5282acda5136",
+					"raw": "http://localhost:3000/users/:id",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"user",
-						"60b19c1f3d6b5282acda5136"
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "60b6d8306815d5316011d0a3"
+						}
 					]
 				}
 			},
